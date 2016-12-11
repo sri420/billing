@@ -14,7 +14,7 @@ import com.demo.services.model.MyRequest;
 
 @SpringBootApplication
 @RestController
-//@EnableEurekaClient
+@EnableEurekaClient
 public class Application {
 
     public static void main(String[] args) {
@@ -37,8 +37,16 @@ public class Application {
         @Value("${message:Hello default}")
         private String message;
 
+        @Value("${name:Gopal}")
+        private String name;
+        
         @RequestMapping("/api/billing/message")
         String getMessage() {
             return this.message;
+        }
+        
+        @RequestMapping("/api/billing/name")
+        String getName() {
+            return this.name;
         }
 }
