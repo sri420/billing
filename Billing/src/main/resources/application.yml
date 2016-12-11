@@ -3,3 +3,8 @@ server:
 endpoints:
   actuator:
     enabled: true
+    
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:12345/eureka
