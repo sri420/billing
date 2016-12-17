@@ -43,6 +43,7 @@ public class Application {
         
         @RequestMapping("/api/billing/message/{name}/{city}")
         String getMessage(@PathVariable String name , @PathVariable String city) {
+        	System.out.println("Inside Billing Service...");
             return this.message + ":" + name +":From " + city;
         }
         
